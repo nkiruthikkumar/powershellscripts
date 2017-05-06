@@ -1,0 +1,1 @@
+$VM = New-VM  -Name 'SP2013-S1'  -MemoryStartUpBytes  6GB   -Path  'C:\ProgramData\Microsoft\Windows\Hyper-V'  -SwitchName  "IEE" -VHDPath  "O:\VHDX\2013_withDB\sp2013_withDB.vhdx"   -ErrorAction  'Stop' -Verbose  $True
