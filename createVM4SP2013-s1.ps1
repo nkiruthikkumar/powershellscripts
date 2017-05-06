@@ -1,4 +1,12 @@
-$VM = New-VM  -Name 'SP2013-S1'  -MemoryStartUpBytes  6GB   -Path  'C:\ProgramData\Microsoft\Windows\Hyper-V'  -SwitchName  "IEE" -VHDPath  "O:\VHDX\2013_withDB\sp2013_withDB.vhdx"   -ErrorAction  'Stop' -Verbose  $True
+$VM = New-VM  -Name 'SP2013-S1'  -MemoryStartUpBytes  6GB   -Path  'C:\ProgramData\Microsoft\Windows\Hyper-V'   -VHDPath  "O:\VHDX\2013_withDB\sp2013_withDB.vhdx"   -ErrorAction  'Stop' -Verbose  $True
 
-Set-VMProcessor sp2013-s1  -Count 4  -Reserve 10 -Maximum 75 -RelativeWeight 200
+
+
+# set static MAC address for the router to set the Static IP
+Add-VMNetworkAdapter  $vm   -StaticMacAddress 'D0:C0:82:01:20:13' -SwitchName 'IEE' 
+
+
+Set-VMProcessor  $VM.name  -Count 4  -Reserve 25 -Maximum 75 -RelativeWeight 200
+
+
 
