@@ -1,4 +1,4 @@
-
+#Add-PSSnapin "Microsoft.SharePoint.PowerShell"
 
 
 #####variables

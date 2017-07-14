@@ -1,4 +1,4 @@
-
+#Add-PSSnapin "Microsoft.SharePoint.PowerShell"
 #####variables
 $searchServiceAppPoolName = "Dedicated SP2016 Search App Pool"
 $searchServiceAppPoolAccount = "doco\spsearch"
