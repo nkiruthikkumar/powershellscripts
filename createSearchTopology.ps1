@@ -19,6 +19,11 @@ $searchTopology = New-SPEnterpriseSearchTopology -SearchApplication $searchServi
 #Set-SPEnterpriseSearchTopology -Identity  $searchTopology 
 
 
+$host1 = Get-SPEnterpriseSearchServiceInstance -Identity "VMSrch01"
+$host2 = Get-SPEnterpriseSearchServiceInstance -Identity "VMSrch02"
+$host3 = Get-SPEnterpriseSearchServiceInstance -Identity "VMSrch03"
+$host4 = Get-SPEnterpriseSearchServiceInstance -Identity "VMSrch04"
+
  ## add components for Host1(VMSrch01)
 New-SPEnterpriseSearchAdminComponent -SearchTopology $searchTopology  -SearchServiceInstance $host1  
 New-SPEnterpriseSearchCrawlComponent -SearchTopology $searchTopology  -SearchServiceInstance $host1  
