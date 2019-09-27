@@ -1,5 +1,5 @@
-vDOW=$(date +"%A")
-vFileName="plex_${vDOW}.tar"
+vMonth=$(date +"%B")
+vFileName="plex_${vMonth}.tar"
 echo $vFileName
 vFilePath="/mnt/sda2/bak/plexlib/$vFileName"
 echo $vFilePath
